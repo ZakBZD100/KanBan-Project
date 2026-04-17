@@ -1,186 +1,177 @@
 # KanBan Project
 
-## apercu visuel
+Simple Kanban web app built with Java and Spring MVC.
 
-### accueil
+This project lets you create projects, manage stories, organize work with columns and swimlanes, and track time on each story.
 
-![Accueil](screenshots/home-page.png)
+## Screenshots
 
-Page d entree avec acces rapide a la creation de projet et a la liste des projets.
+### Home
 
-### board kanban
+![Home](./screenshots/home-page.png)
 
-![Board Kanban](screenshots/kanban-board.png)
+Entry page with quick access to project creation and project list.
 
-Vue principale du board avec colonnes, deplacement des stories et actions rapides.
+### Kanban board
 
-### board avec swimlanes
+![Kanban board](./screenshots/kanban-board.png)
 
-![Board avec swimlanes](screenshots/board-with-swimlanes.png)
+Main board view with columns, story movement, and quick actions.
 
-Organisation visuelle par swimlanes pour separer les flux d un meme projet.
+### Board with swimlanes
 
-### creation de projet
+![Board with swimlanes](./screenshots/board-with-swimlanes.png)
 
-![Creation projet](screenshots/create-project-form.png)
+Visual separation of workflows inside the same project.
 
-Formulaire de creation de projet avec validations de base.
+### Create project
 
-### ajout de story
+![Create project](./screenshots/create-project-form.png)
 
-![Ajout de story](screenshots/add-story-modal.png)
+Project creation form with basic validation.
 
-Creation rapide d une story depuis le board.
+### Add story
 
-### detail story et timer
+![Add story](./screenshots/add-story-modal.png)
 
-![Detail story et timer](screenshots/story-detail-time-tracking.png)
+Quick story creation directly from the board.
 
-Fiche story avec suivi du temps, timer start/stop et historique des worklogs.
+### Story details and timer
 
-### exemple de workflow
+![Story details and timer](./screenshots/story-detail-time-tracking.png)
 
-![Exemple workflow](screenshots/workflow-example.png)
+Story page with timer start/stop and worklog history.
 
-Exemple de workflow avec colonnes et progression des stories.
+### Workflow example
 
-## presentation du projet
+![Workflow example](./screenshots/workflow-example.png)
 
-Projet de gestion de taches en mode Kanban, developpe en Java avec Spring MVC.
+Example of story progression across columns.
 
-Le projet permet de creer des projets, gerer des stories, organiser le travail par colonnes et swimlanes, et suivre le temps passe sur chaque story.
+## Main features
 
-## ce que fait le projet
+- Create, edit, and delete projects.
+- Automatic default columns: BACKLOG, IN PROGRESS, REVIEW, DONE, BLOCKED.
+- Drag and drop stories between columns.
+- Custom columns with max capacity (WIP limit).
+- Backlog/Done sub-columns in selected columns.
+- Swimlanes per project.
+- Story management: create, edit, delete, assign.
+- Time tracking: timer + manual worklogs.
+- Unit and integration tests.
 
-- creation, edition et suppression de projets
-- creation automatique des colonnes de base: BACKLOG, IN PROGRESS, REVIEW, DONE, BLOCKED
-- board Kanban avec deplacement des stories entre colonnes
-- colonnes personnalisees avec capacite max (WIP limit)
-- sous-colonnes Backlog/Done pour certaines colonnes
-- gestion des swimlanes par projet
-- gestion des stories: creation, edition, suppression, assignation
-- timer et worklogs (demarrer, arreter, ajout manuel, historique)
-- tests unitaires + tests d integration
+## Tech stack
 
-## stack technique
+- Java 17
+- Maven (multi-module)
+- Spring MVC 5
+- Thymeleaf
+- Bootstrap 5
+- In-memory repository layer (no SQL database)
+- JUnit 5, Mockito, Selenium, WebDriverManager
+- JaCoCo, SpotBugs, PITest
 
-- java 17
-- maven (multi-modules)
-- spring mvc 5
-- thymeleaf
-- bootstrap 5
-- architecture en memoire (pas de base SQL)
-- junit 5, mockito, selenium, webdrivermanager
-- jacoco, spotbugs, pitest
-
-## structure du projet
+## Project structure
 
 ```text
 gestiondetaches/
 ├── tarnished/
-│   ├── project-model/      # entites metier
-│   ├── project-repomem/    # repositories en memoire
-│   └── project-app/        # controllers + vues web
-├── screenshots/            # captures README
+│   ├── project-model/      # domain entities
+│   ├── project-repomem/    # in-memory repositories
+│   └── project-app/        # controllers + web views
+├── screenshots/            # README screenshots
 ├── .gitignore
 ├── .gitlab-ci.yml
 └── README.md
 ```
 
-## installation et lancement
+## Setup and run
 
-### prerequis
+### Prerequisites
 
-- java 17
-- maven 3.9+
+- Java 17
+- Maven 3.9+
 
-### build
+### Build
 
-Depuis le dossier `tarnished`:
+From `tarnished`:
 
 ```bash
 mvn clean install
 ```
 
-### lancer l application
+### Run
 
-Depuis `tarnished/project-app`:
+From `tarnished/project-app`:
 
 ```bash
 mvn jetty:run
 ```
 
-Puis ouvrir:
+Open:
 
 - http://localhost:8080/gl2526-tarnished
 
-### tests
+### Tests
 
-Depuis `tarnished`:
+From `tarnished`:
 
 ```bash
 mvn test
 ```
 
-Pour les tests d integration:
+Integration tests:
 
 ```bash
 mvn verify
 ```
 
-## resume pour portfolio
+## Portfolio integration
 
-Description courte:
+Target portfolio repository:
 
-Application web Kanban en Java (Spring MVC) pour piloter des projets et stories, avec board drag and drop, swimlanes, et suivi du temps par story.
+- https://github.com/ZakBZD100/Portfolio
 
-Stacks:
+Portfolio-ready summary:
 
-Java 17, Spring MVC, Thymeleaf, Bootstrap, Maven, JUnit, Mockito, Selenium.
+Short description:
 
-Role du projet:
-
-Projet de genie logiciel centre sur la modelisation metier, l architecture multi-modules et les tests (unitaires + integration).
-
-### bloc pret a copier dans le portfolio
-
-Description:
-
-Application Kanban Java pour gerer projets et stories avec board interactif, swimlanes et suivi du temps.
+Kanban web application in Java (Spring MVC) to manage projects and stories with an interactive board, swimlanes, and built-in time tracking.
 
 Stacks:
 
 Java 17, Spring MVC, Thymeleaf, Bootstrap, Maven, JUnit, Mockito, Selenium.
 
-Role:
+Project role:
 
-Conception et implementation d une application web de gestion de taches en architecture multi-modules, avec logique metier testee.
+Software engineering project focused on domain modeling, multi-module architecture, and test-driven quality checks.
 
-## github et collaboration
+## GitHub configuration
 
-### start coding with codespaces
+### Start coding with Codespaces
 
-Le projet peut etre lance dans GitHub Codespaces. Une fois l environnement ouvert:
+This project can be started in GitHub Codespaces.
 
-- verifier Java 17 et Maven
-- executer `mvn clean install` dans `tarnished`
-- executer `mvn jetty:run` dans `tarnished/project-app`
+After opening the workspace:
 
-### add collaborators
+- Check Java 17 and Maven.
+- Run `mvn clean install` in `tarnished`.
+- Run `mvn jetty:run` in `tarnished/project-app`.
 
-Sur GitHub:
+### Add collaborators
 
-- ouvrir le repository
-- aller dans Settings > Collaborators and teams
-- ajouter les collaborateurs par username GitHub ou email
+In GitHub repository settings:
 
-### quick setup
+- Go to Settings > Collaborators and teams.
+- Add collaborators using GitHub username or email.
 
-Repository cible:
+### Quick setup
+
+Repository URL:
 
 - https://github.com/ZakBZD100/KanBan-Project.git
 
-Creer un repo:
+Create a new repository:
 
 ```bash
 echo "# KanBan-Project" >> README.md
@@ -192,7 +183,7 @@ git remote add origin https://github.com/ZakBZD100/KanBan-Project.git
 git push -u origin main
 ```
 
-Push un projet existant:
+Push an existing project:
 
 ```bash
 git remote add origin https://github.com/ZakBZD100/KanBan-Project.git
@@ -200,7 +191,7 @@ git branch -M main
 git push -u origin main
 ```
 
-## collaborateurs
+## Contributors
 
 - Zakariae El Bouzidi
 - Nabil Dahmani
@@ -208,9 +199,9 @@ git push -u origin main
 - Moncef Hiam
 - Louay BEN El Toufa
 
-## licence
+## License
 
-Ce projet est distribue sous licence MIT. Voir le fichier LICENSE.
+This project is distributed under the MIT License. See the LICENSE file.
 
 Zakariae El Bouzidi 2026
 
