@@ -112,6 +112,11 @@ Open:
 
 - http://localhost:8080/gl2526-tarnished
 
+Staging live demo (short info):
+
+- https://staging.cluster.ensisa.uha.fr/gl2526-tarnished/
+- This staging server may be unavailable depending on server status.
+
 ### Tests
 
 From `tarnished`:
